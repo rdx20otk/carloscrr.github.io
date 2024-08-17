@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles.css">   
     <!-- enlace para iconos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="icon" href="iconos/arriba.png" type="image/x-icon">
+
+
 </head>
 <body>
     <!--Franja superior-->
@@ -36,16 +39,15 @@
     <!--FIN DE IMAGEN DE PORTADA-->
 
 
-
     <!--Barra de navegacion-->
     <nav class="navbar">
         <div class="navbar-indicator"></div>
         <ul class="navbar-menu">
-            <li><a href="#idpresentacion">Presentación</a></li>
-            <li><a href="#experience">Experiencia Laboral</a></li>
-            <li><a href="#educacion">Educación</li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#idcontactame">Contactame</a></li>
+            <li><a href="#idpresentacion" onclick="scrollToSection(event, 'idpresentacion')">Presentación</a></li>
+            <li><a href="#experience" onclick="scrollToSection(event, 'experience')">Experiencia Laboral</a></li>
+            <li><a href="#educacion" onclick="scrollToSection(event, 'educacion')">Educación</li>
+            <li><a href="#habilidades" onclick="scrollToSection(event, 'habilidades')">Habilidades</a></li>
+            <li><a href="#idcontactame" onclick="scrollToSection(event, 'idcontactame')">Contactame</a></li>
         </ul>
     </nav>
     <!--Fin de Barra de Navegación-->
@@ -55,9 +57,9 @@
     <main class="main-content">
         <section id="idpresentacion">
             <h2><i class="fas fa-user"></i> Presentación</h2><br>
-            <p class="estilo-text">Soy bachiller en Ingeniería Informática en etapa de práctica, con conocimientos en lenguajes de diseño y programación, y un enfoque en la aplicación práctica de estos conocimientos. Mi formación académica me ha proporcionado una base sólida para enfrentar desafíos informáticos y he adquirido habilidades en el manejo de aplicaciones web, diseño, edición, soporte técnico y digitación.</p><br><br>
-            <p class="estilo-text">Además, tengo experiencia en atención al cliente y capacitación, lo que me ha permitido desarrollar habilidades interpersonales importantes. Mi actitud proactiva y mi compromiso con el aprendizaje continuo me motivan a explorar nuevas oportunidades y contribuir al éxito de los proyectos. Estoy dedicado a mi crecimiento personal y profesional, buscando siempre mejorar y expandir mis habilidades.</p>
-
+            <p class="estilo-text">Soy bachiller en Ingeniería Informática en etapa de práctica, con conocimientos básicos en lenguajes de diseño y programación, enfocado en aplicar estos conocimientos de manera práctica. Mi formación académica me ha proporcionado una base sólida para enfrentar desafíos informáticos, y he adquirido habilidades en el manejo de aplicaciones web, diseño, edición, soporte técnico y digitación.</p>
+            <p class="estilo-text">Además, tengo experiencia en atención al cliente y capacitación, lo que me ha permitido desarrollar habilidades interpersonales importantes. Me caracterizo por mi empatía y adaptabilidad, y soy capaz de trabajar bajo presión, utilizando tecnologías de información de manera efectiva.</p>
+            <p class="estilo-text">Mi actitud proactiva y mi compromiso con el aprendizaje continuo me motivan a explorar nuevas oportunidades y contribuir al éxito de los proyectos. Estoy dedicado a mi crecimiento personal y profesional, buscando siempre mejorar y expandir mis habilidades, manteniendo valores como la honestidad, creatividad, respeto, confidencialidad y puntualidad.</p>
         </section>                       
            
      
@@ -231,8 +233,8 @@
                     <ul class="estilos-list">
                         <li><strong>INGLES (BASICO/ PRE INTERMEDIO/ INTERMEDIO): </strong>Impartido por el Instituto de Idiomas de la universidad nacional de piura</li>
                         <li><strong>COMPUTACION PARA INGENIEROS: </strong>Impartido por la facultad de ingeniería industrial</li>
-                        <li><strong>CURSO DE CAPACITACION EN PYTHON </strong></li>
-                        <li><strong>CURSO DE CAPACITACION EN CYBERSEGURIDAD </strong></li>
+                        <li><strong>CURSO DE CAPACITACION EN PYTHON </strong> (En Progreso) <i class="fas fa-spinner fa-spin" title="En progreso"></i></li>
+                        <li><strong>CURSO DE CAPACITACION EN CYBERSEGURIDAD </strong> (En Progreso) <i class="fas fa-spinner fa-spin" title="En progreso"></i></li>
                     </ul>
                 </div>              
             </div>
@@ -266,7 +268,7 @@
                         <h4>Nivel Básico / Intermedio</h4><br>
                         <li>Python</li>
                         <li>HTML, CSS Desarrollo y creación de paginas web</li>
-                        <li>JavasScript</li>
+                        <li>JavaScript</li>
                         <li>SQL server /Sistema de gestión de base de datos</li>
                         <li>WordPress</li>                       
                     </ul>
@@ -289,7 +291,7 @@
         <section id="idcontactame">
             <h2><i class="fas fa-envelope"></i> Contactame</h2>
             <div class="container-form">
-                <form action="enviar.php" method="post">
+                <form id="form-contact" action="https://formspree.io/f/xqazlwel" method="post">
                     <div class="form-group">
                         <label for="nombre">NOMBRE:</label>
                         <input type="text" id="nombre" name="nombre" required>
@@ -303,7 +305,9 @@
                         <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
                     </div>
                     <button type="submit">Enviar</button>
+                    <div id="status-message"></div>
                 </form>
+                
             </div>          
         </section>
 
@@ -313,12 +317,11 @@
     <!-- Franja Inferior -->
     <footer class="footer">
         <div class="footer-content">
-            <p>© 2024 Carlos.L.Carreño. Todos los derechos reservados.</p>            
+            <p>© 2024 Carlos.L.Carreño.</p>
+            <p>Este sitio personal está en constante actualización para mejorar su contenido y funcionalidades. ¡Gracias por visitarme!</p>        
         </div>
     </footer>
     <!--Fin de franja inferior-->
-
-
 
     <script src="scripts.js"></script>
     
